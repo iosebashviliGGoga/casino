@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="/script.js"></script>
+    <script defer src="https://kit.fontawesome.com/61a17bec72.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        // search function 
+        $(document).ready(function(){
+          $("#search").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("p").filter(function() {
+              $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+    </script>
+
+    <title>casino</title>
+</head>
+<body>
+    <header>
+        <div class="header-list">
+            <div class="">sports</div>
+            <div class="underlined">in-play</div>
+            <div class="">casino</div>
+            <div class="">live casino</div>
+            <div class="">virtual sports</div>
+        </div>
+        <div class="header-login">
+            <div class="join">JOIN</div>
+            <div class="">Log in</div>
+        </div>
+    </header>
+    <main>
+        <div class="double-image">
+            <img src="/images/double.JPG" alt="">
+            <img src="/images/double.JPG" alt="">
+        </div>
+        <div class="buttons">
+            <div class="all">
+                    <div class="underlined-yellow">All games <span>(3659)</span></div>
+                    <div class="">All providers  <i class="fa-solid fa-angle-down"></i></div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <div class=""> <input id="search" placeholder=" search a games ...   "> </div>
+            </div>
+            <div class="allbuttons">
+                <div class=""><img src="/images/video slots.png" alt=""> video slots</div>
+                <div class=""><img src="/images/FAV.png" alt=""> popular slots</div>
+                <div class=""><img src="/images/popular slot.png" alt=""> FAV</div>
+                <div class=""><img src="/images/new games.png" alt="">new games</div>
+                <div class=""><img src="/images/table games.png" alt="">table games</div>
+                <div class=""><img src="/images/777.png" alt="">jackpot games</div>
+                <div class=""><img src="/images/cards.png" alt="">video poker</div>
+                <div class=""><img src="/images/plus icon.png" alt="">MORE</div>
+            </div>
+        </div>
+        <div class="games" id="games">
+            
+        </div>
+        <button onclick="starter()">show more</button>
+    </main>
+    
+</body>
+</html>
+
+
